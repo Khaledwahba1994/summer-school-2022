@@ -201,8 +201,8 @@ class TrajectoryUtils():
                 #  - do not forget to wrap angle to <-pi, pi) (see/use wrapAngle() in utils.py)
 
                 # [STUDENTS TODO] Change variable 'hdg_interp', nothing else
-                hdg_interp = waypoints[0].heading
-
+                ds = distEuclidean(subtraj_0, subtraj_1)/subtraj_len
+                hdg_interp = wrapAngle(hdg_from + (d_hdg* ds))
                 # replace heading
                 hdg_from   = hdg_interp
                 wp         = subtraj[i]
