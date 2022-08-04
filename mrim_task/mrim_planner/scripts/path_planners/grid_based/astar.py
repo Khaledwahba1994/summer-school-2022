@@ -71,8 +71,9 @@ class Node:
         a = self.pos[0] - self.goal[0]
         b = self.pos[1] - self.goal[1]
         c = self.pos[2] - self.goal[2]
-
-        raise NotImplementedError('[STUDENTS TODO] Heuristic function guiding the state space exploration not implemented. You have to finish it on your own.')
+        
+        return sqrt(a**2 + b**2 + c**2)
+        # raise NotImplementedError('[STUDENTS TODO] Heuristic function guiding the state space exploration not implemented. You have to finish it on your own.')
 # # #}
 
 # # #{ class AStar
@@ -97,12 +98,16 @@ class AStar():
         
         if len(path) <= 2:
             return path
-
-        raise NotImplementedError('[STUDENTS TODO] A*: path straightening is not finished. Finish it on your own.')
+        # print('path: ',path)
+        # raise NotImplementedError('[STUDENTS TODO] A*: path straightening is not finished. Finish it on your own.')
         # Tips:
         #  - divide the given path by a certain ratio and use this method recursively
 
         # [STUDENTS TODO] REMOVE
+        # for p in range(1,len(path)-1): 
+        #     pt = (path[p] + path[p-1])/2
+
+        #     pass
         if self.grid.obstacleBetween(pt1, pt2):
 
             # [STUDENTS TODO] Replace seg1 and seg2 variables effectively
