@@ -95,8 +95,7 @@ class AStar():
     def halveAndTest(self, path):
         pt1 = path[0]
         pt2 = path[-1]
-        print('pt1: ', pt1)
-        print('pt2: ', pt2)
+     
         if len(path) <= 2:
             return path
         # print('path: ',path)
@@ -110,7 +109,7 @@ class AStar():
             # [STUDENTS TODO] Replace seg1 and seg2 variables effectively
             seg1 = path[:1]
             seg2 = path[1:]
-
+            self.halveAndTest(seg2)
             seg1.extend(seg2)
             return seg1
         
