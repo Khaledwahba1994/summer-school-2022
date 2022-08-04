@@ -43,7 +43,7 @@ class MrimPlanner:
         self._smoothing_distance       = rospy.get_param('~path_smoothing/lookahead_dist', 0.3)
         self._sample_with_stops        = rospy.get_param('~trajectory_sampling/with_stops', True)
         self._global_frame             = rospy.get_param('~global_frame', "gps_origin")
-        self._tsp_clustering_method    = rospy.get_param('~tsp/clustering', 'random')
+        self._tsp_clustering_method    = rospy.get_param('~tsp/clustering', 'kmeans')
 
         ## | ---------------- setup collision avoidance --------------- |
         self._safety_distance_mutual = rospy.get_param('~trajectories/min_distance/mutual')

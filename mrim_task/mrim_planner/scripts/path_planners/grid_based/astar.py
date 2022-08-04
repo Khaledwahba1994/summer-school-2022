@@ -95,7 +95,8 @@ class AStar():
     def halveAndTest(self, path):
         pt1 = path[0]
         pt2 = path[-1]
-        
+        print('pt1: ', pt1)
+        print('pt2: ', pt2)
         if len(path) <= 2:
             return path
         # print('path: ',path)
@@ -104,10 +105,6 @@ class AStar():
         #  - divide the given path by a certain ratio and use this method recursively
 
         # [STUDENTS TODO] REMOVE
-        # for p in range(1,len(path)-1): 
-        #     pt = (path[p] + path[p-1])/2
-
-        #     pass
         if self.grid.obstacleBetween(pt1, pt2):
 
             # [STUDENTS TODO] Replace seg1 and seg2 variables effectively
