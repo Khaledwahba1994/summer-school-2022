@@ -98,8 +98,6 @@ class AStar():
      
         if len(path) <= 2:
             return path
-        # print('path: ',path)
-        # raise NotImplementedError('[STUDENTS TODO] A*: path straightening is not finished. Finish it on your own.')
         # Tips:
         #  - divide the given path by a certain ratio and use this method recursively
 
@@ -108,7 +106,8 @@ class AStar():
 
             # [STUDENTS TODO] Replace seg1 and seg2 variables effectively
             seg1 = path[:1]
-            seg2 = path[1:]
+            newSegIdx =  1
+            seg2 = path[newSegIdx:]
             self.halveAndTest(seg2)
             seg1.extend(seg2)
             return seg1
